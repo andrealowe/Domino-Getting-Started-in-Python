@@ -9,7 +9,7 @@ api_key = os.environ['DOMINO_USER_API_KEY']
 headers = {'X-Domino-Api-Key': api_key,  'Content-Type': 'application/json'}  
 
 #base url
-base_url = <your deployment url> #i.e. 'https://mycompany.domino.tech'
+base_url = '[your URL]' #i.e. 'https://mycompany.domino.tech'
 
 #get user id
 url_user = '{base_url}/v4/users/self'.format(base_url=base_url)

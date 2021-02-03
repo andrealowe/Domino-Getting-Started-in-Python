@@ -80,7 +80,7 @@ app.layout = html.Div(style={'paddingLeft': '40px', 'paddingRight': '40px'}, chi
                 html.Div('Select the starting date for the training data:'),
                 dcc.DatePickerSingle(
                     id='date-picker',
-                    date=dt(2019, 9, 10)
+                    date=dt(2020, 9, 10)
                 )
         ], style={'marginTop': 25}),
         html.Div([
@@ -104,6 +104,7 @@ def update_output(fuel_type, start_date):
         r = requests.get(url, allow_redirects=True)
         open('data.csv', 'wb').write(r.content)
         df = pd.read_csv('data.csv', skiprows=1, skipfooter=1, header=None, engine='python')
+        df = df.iloc[:,0:18]
         df.columns = ['HDF', 'date', 'half_hour_increment',
                 'CCGT', 'OIL', 'COAL', 'NUCLEAR',
                 'WIND', 'PS', 'NPSHYD', 'OCGT',

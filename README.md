@@ -18,4 +18,4 @@ Table of Contents:
 
 To run the model API, be sure to set up an environment with the following code in the Dockerfile:
 
-`RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" papermill requests dash && pip install fbprophet==0.6`
+`RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" "papermill<2.0.0" requests dash && pip install fbprophet==0.6`
