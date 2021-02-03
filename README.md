@@ -23,6 +23,6 @@ Before using this project in a training, follow the steps below:
 
 `RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" "papermill<2.0.0" requests dash && pip install fbprophet==0.6`
 
-* Set the `ShortLived.iFrameSecurityEnabled` to false (this is so that the Dash app plot can render).
+* Set the `ShortLived.iFrameSecurityEnabled` to `false` (this is so that the Dash app plot can render).
 
 * Publish the app, create a model API, launcher, and scheduled job to test functionality. 
