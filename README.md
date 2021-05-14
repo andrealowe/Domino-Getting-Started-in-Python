@@ -21,7 +21,9 @@ Before using this project in a training, follow the steps below:
 
 * Check that the `com.cerebro.domino.builder.job.environment.buildMemory` central config is set to `4294967294` (a requirement for PyStan). Then create environment with the following dockerfile instructions:
 
-`RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" "papermill<2.0.0" requests dash && pip install fbprophet==0.6`
+`RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" requests dash && pip install fbprophet==0.6`
+`RUN pip install --upgrade nbclient nbconvert`
+`RUN pip install papermill`
 
 * Set the `ShortLived.iFrameSecurityEnabled` to `false` (this is so that the Dash app plot can render).
 
