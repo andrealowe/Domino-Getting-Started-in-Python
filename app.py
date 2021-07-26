@@ -48,7 +48,7 @@ app.layout = html.Div(style={'paddingLeft': '40px', 'paddingRight': '40px'}, chi
         html.H1(children='Predictor for Power Generation in UK'),
         html.Div(children='''
         This is a web app developed in Dash and published in Domino.
-        You can add more description here to describe the app.
+        You can add more description here if you'd like.
     '''),
          html.Div([
             html.P('Select a Fuel Type:', className='fuel_type', id='fuel_type_paragraph'),
@@ -80,7 +80,7 @@ app.layout = html.Div(style={'paddingLeft': '40px', 'paddingRight': '40px'}, chi
                 html.Div('Select the starting date for the training data:'),
                 dcc.DatePickerSingle(
                     id='date-picker',
-                    date=dt(2020, 9, 10)
+                    date=dt(2021, 1, 1)
                 )
         ], style={'marginTop': 25}),
         html.Div([
