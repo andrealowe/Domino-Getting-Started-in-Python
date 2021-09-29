@@ -21,7 +21,7 @@ Before using this project in a training, follow the steps below:
 
 * Check that the `com.cerebro.domino.builder.job.environment.buildMemory` central config is set to `4294967294` (a requirement for PyStan). 
 
-* Then create environment with this base image: dominodatalab/base:Ubuntu18_DAD_Py3.7_R3.6_20200508 and the following dockerfile instructions:
+* Then create environment with this base image: quay.io/domino/base:Ubuntu18_DAD_Py3.6_R3.6_20190918 and the following dockerfile instructions:
 
 `RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" requests dash && pip install fbprophet==0.6`
 `RUN pip install --upgrade nbclient nbconvert`
