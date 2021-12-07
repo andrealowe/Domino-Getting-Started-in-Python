@@ -23,10 +23,13 @@ Before using this project in a training, follow the steps below:
 
 * Then create environment with this base image: quay.io/domino/base:Ubuntu18_DAD_Py3.6_R3.6_20190918 and the following dockerfile instructions:
 
-`RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" requests dash && pip install fbprophet==0.6`
+`RUN pip install "pystan==2.17.1.0" "plotly<4.0.0" requests && pip install fbprophet==0.6`
 `RUN pip install --upgrade nbclient nbconvert`
 `RUN pip install papermill`
 
 * Set the `ShortLived.iFrameSecurityEnabled` to `false` (this is so that the Dash app plot can render).
 
 * Publish the app, create a model API, launcher, and scheduled job to test functionality. 
+
+* The app in this file is compatible with dash < 2.0.0. Ensure you install the following version of dash:
+`RUN pip install dash==1.20.0 dash-core-components==1.16.0 dash-html-components==1.1.3 dash-renderer==1.9.1 dash-table==4.11.3`
